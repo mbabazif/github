@@ -36,7 +36,7 @@ export class FormComponent implements OnInit {
   //   this.repos = repos;
   // });
   // }
-  submitGoal(){
+  submit(){
     this.addgithub.emit(this.newgithub);
 }
 }
