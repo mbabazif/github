@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Output, EventEmitter } from "@angular/core";
 import { UserService } from "../usres/user.service";
 import { HttpClient } from "@angular/common/http";
 
@@ -18,10 +18,13 @@ export class FormComponent implements OnInit {
     //   console.log(user);
     //   this.user = user;
     // });
+  }
+  submituser() {
     this._http
       .get("https://api.github.com/users/" + this.username)
       .subscribe(repos => {
-        this.repos = repos;
+        // this.repos = repos;
+        console.log(repos);
       });
   }
   ngOnInit() {}
@@ -36,7 +39,4 @@ export class FormComponent implements OnInit {
   //   this.repos = repos;
   // });
   // }
-  submit(){
-    this.addgithub.emit(this.newgithub);
-}
 }
