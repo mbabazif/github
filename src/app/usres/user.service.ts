@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import 'rxjs/add/operator/map';
+// import 'rxjs/add/operator/map';
 
 import { Users } from '../users';
 
@@ -19,13 +19,13 @@ export class UserService {
     console.log('Userservice')
     this.username =""
   }
-  getUser(){
-    return this._http.get('https://api.github.com/users/' + this.username)
-    .data(result => result);
-  }
-  updateUser(username:string){
-this.username = username;
-  }
+//   getUser(){
+//     return this._http.get('https://api.github.com/users/' + this.username)
+//     .data(result => result);
+//   }
+//   updateUser(username:string){
+// this.username = username;
+//   }
 
 }
 
