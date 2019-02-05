@@ -18,7 +18,8 @@
       </form>
     </div>
   </div>
-  <button ng-click="filterSearch = searchModel">Search</button> 
+  <button (ng-search)="sendSearch' = searchname">Search</button> 
+  <form (ngSubmit)='submitGoal()' #goalForm='ngForm'></form>
   
   
   <div class="col-md-8 col-sm-8 col-xs-12">
