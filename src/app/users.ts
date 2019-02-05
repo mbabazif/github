@@ -1,3 +1,10 @@
 export class Users {
-    constructor(private username:string, private Location:string,private Email:string,private MemberSince:number){}
+  constructor(
+    public name: string,
+    public location: string,
+    public email: string,
+    public followers: number,
+    public following: number,
+    public memberSince: Date
+  ) {}
 }

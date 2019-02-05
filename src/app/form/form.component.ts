@@ -1,8 +1,6 @@
-import { Component, OnInit, Output, EventEmitter } from "@angular/core";
-import { UserService } from "../usres/user.service";
-import { HttpClient } from "@angular/common/http";
+import { Component, OnInit } from "@angular/core";
 
-// import "rxjs/add/operator/map";
+import { UserService } from "../usres/user.service";
 
 @Component({
   selector: "app-form",
@@ -10,33 +8,16 @@ import { HttpClient } from "@angular/common/http";
   styleUrls: ["./form.component.css"]
 })
 export class FormComponent implements OnInit {
-  user: any = [];
-  repos: any = [];
-  username: string;
-  constructor(private _userservice: UserService, private _http: HttpClient) {
-    // this._userservice.getUser().subscribe(user => {
-    //   console.log(user);
-    //   this.user = user;
-    // });
+  submitSearch(name) {
+    this.userService.getProfileInfo(name.target.value);
+    this.repoService.getRepoInfo(name.target.value);
+    this.userService.getProfileInfo(name.target.value);
+    this.userService.getProfileInfo(name.target.value);
+    this.userService.getProfileInfo(name.target.value);
   }
-  submituser() {
-    this._http
-      .get("https://api.github.com/users/" + this.username)
-      .subscribe(repos => {
-        // this.repos = repos;
-        console.log(repos);
-      });
-  }
+  constructor(
+    private userService: UserService,
+    private repoService: UserService
+  ) {}
   ngOnInit() {}
-  // searchUser() {
-  //   this._userservice.updateUser(this.username);
-  //   this._userservice.getUser().subscribe(user => {
-  //     this.user = user;
-  //   });
-
-  // this._userservice.getRepos().subscribe(repos => {
-
-  //   this.repos = repos;
-  // });
-  // }
 }

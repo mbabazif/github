@@ -4,7 +4,11 @@
 
 export const environment = {
   production: false,
-  apikey: "9d646fb5aec233af960f35f6ea1fbc426baad404"
+  // apikey: "9d646fb5aec233af960f35f6ea1fbc426baad404"
+
+  apiUrl: "https://api.github.com/users/",
+  apikey: "?access_token=9d646fb5aec233af960f35f6ea1fbc426baad404",
+  apiRepokey: "/repos?access_token=9d646fb5aec233af960f35f6ea1fbc426baad404"
 };
 
 /*
