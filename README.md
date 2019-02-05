@@ -25,13 +25,13 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-# Github
+
 
 #### By Mbabazi Florence
 
 ## Description
 
-This program gives the user the room to add the the github name
+This program gives the user the room to add the the github name so that he/she can access the projects
 
 ## Setup/Installation Requirements
 
@@ -42,9 +42,9 @@ This program can only be accessed on a computer with Git and visual stedio insta
 
 ## Specifications
 
-The user is able to enter the quote
-The user is likely to choose the best quote for her/her by using the upvote and downvoted
-The user can delete the quote
+The user is able to enter the name on github
+The user is likely to go all the projects u have on local repostory
+
 
 ## Technologies Used
 
