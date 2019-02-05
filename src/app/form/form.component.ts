@@ -17,7 +17,7 @@ export class FormComponent implements OnInit {
       this.user = user;
     });
     this._userservice.getRepos().subscribe(repos => {
-      // console.log(user);
+      
       this.repos = repos;
     });
   }
@@ -27,9 +27,9 @@ export class FormComponent implements OnInit {
     this._userservice.getUser().subscribe(user => {
       this.user = user;
     });
-    // Console.log('It works');
+    
     this._userservice.getRepos().subscribe(repos => {
-      // Console.log(user);
+      
       this.repos = repos;
     });
   }

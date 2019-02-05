@@ -1,4 +1,9 @@
 import { Component } from '@angular/core';
+import {HttpClient} from  '@angular/common/http';
+// import { UserService } from "../usres/user.service";
+import {FormsModule} from '@angular/forms';
+
+
 
 @Component({
   selector: 'app-root',
