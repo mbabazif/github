@@ -35,7 +35,7 @@ export class UserService {
     }
     const promise = new Promise((resolve, reject) => {
       this.http
-        .get<ApiResponse>(environment.apiUrl + username + environment.apikey)
+        .get<ApiResponse>(environment.api_key + username + environment.api_key)
         .toPromise()
         .then(profile => {
           this.users.name = profile.name;
@@ -62,7 +62,12 @@ export class UserService {
       clone_url: string;
     }
     this.http
-      .get<ApiResponse>(environment.apiUrl + username + environment.apiRepokey)
+      .get<ApiResponse>(
+        "https://api.github.com/users/" +
+          username +
+          "?access_token=" +
+          environment.api_key
+      )
       .subscribe(response => {
         this.items = response;
       });

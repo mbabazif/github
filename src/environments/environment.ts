@@ -4,11 +4,11 @@
 
 export const environment = {
   production: false,
-  // apikey: "9d646fb5aec233af960f35f6ea1fbc426baad404"
+  api_key: "9d646fb5aec233af960f35f6ea1fbc426baad404"
 
-  apiUrl: "https://api.github.com/users/",
-  apikey: "?access_token=",
-  apiRepokey: "/repos?access_token="
+  // apiUrl: "https://api.github.com/users/",
+  // apikey: "?access_token=",
+  // apiRepokey: "/repos?access_token="
 };
 
 /*
