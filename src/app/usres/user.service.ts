@@ -35,7 +35,9 @@ export class UserService {
     }
     const promise = new Promise((resolve, reject) => {
       this.http
-        .get<ApiResponse>(environment.api_key + username + environment.api_key)
+        .get<ApiResponse>(
+          "https://api.github.com/users/" + username + environment.api_key
+        )
         .toPromise()
         .then(profile => {
           this.users.name = profile.name;

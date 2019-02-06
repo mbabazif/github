@@ -4,10 +4,10 @@
 
 export const environment = {
   production: false,
-  api_key: "9d646fb5aec233af960f35f6ea1fbc426baad404"
+  api_key: "8642311cb990d3c6ce2c2a17faa7f3e7b18fda4a",
 
-  // apiUrl: "https://api.github.com/users/",
-  // apikey: "?access_token=",
+  apiUrl: "https://api.github.com/users/",
+  apikey: "?access_token="
   // apiRepokey: "/repos?access_token="
 };
 
