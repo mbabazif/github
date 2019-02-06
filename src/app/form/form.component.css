@@ -2,6 +2,10 @@
   position: center;
 }
 .jumbtron {
-  background-color: lightskyblue;
   text-align: center;
+}
+.body {
+  background-color: lightskyblue;
+  margin-left: 400px;
+  margin-right: 400px;
 }

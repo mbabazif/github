@@ -8,12 +8,12 @@ import { Users } from "../users";
   styleUrls: ["./form.component.css"]
 })
 export class FormComponent implements OnInit {
-  username = "";
+  username = "florence";
   users: Users;
-  submitSearch(name) {
+  submitSearch() {
     console.log(this.username);
     this.userService.getProfileInfo(this.username);
-    this.repoService.getRepoInfo(this.username);
+    this.userService.getRepoInfo(this.username);
     this.userService.getProfileInfo(this.username);
     this.userService.getProfileInfo(this.username);
     this.userService.getProfileInfo(this.username);

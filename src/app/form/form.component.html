@@ -1,51 +1,51 @@
-<div class="image">
-  <img
-    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkpwfnaGbdxJeO62FJXNOeJso_SA4PDmHb1I5kAFodSq3Na06v"
-  />
-</div>
+<div class="body">
+  <div class="container">
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkpwfnaGbdxJeO62FJXNOeJso_SA4PDmHb1I5kAFodSq3Na06v"
+    />
 
-<div class="container-boby">
-  <div class="row">
-    <div class="col-md-12">
-      <form class="well" (ngSubmit)="submitSearch()">
-        <div class="form-group">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Enter github username..."
-            [(ngModel)]="username"
-            name="username"
-            style="text-align:center"
-          />
-        </div>
-        <button type="submit">Search</button>
-      </form>
+    <div class="row">
+      <div class="col-md-12">
+        <form class="well" (ngSubmit)="submitSearch()">
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter github username..."
+              [(ngModel)]="username"
+              name="username"
+              style="text-align:center"
+            />
+          </div>
+          <button type="submit">Search</button>
+        </form>
+      </div>
     </div>
-  </div>
 
-  <div class="col-md-8 col-sm-8 col-xs-12">
-    <div class="stats">
-      <p>{{ users.name }}</p>
-      <span class="label label-default">{{ users.name }} Public Repos</span>
-      <span class="label label-success">{{ users.username }} Followers</span>
-      <span class="label label-info">{{ users.following }} Following</span>
-      <span class="label label-danger">{{ users.location }}</span>
-      <span class="label label-danger">{{ users.location }}</span>
+    <div class="col-md-8 col-sm-8 col-xs-12">
+      <div class="stats">
+        <p>{{ users.name }}</p>
+        <!-- <span class="label label-default">{{ users.username }} Public Repos</span> -->
+        <!-- <span class="label label-success">{{ users.username }} Followers</span> -->
+        <span class="label label-info">{{ users.following }} Following</span>
+        <span class="label label-danger">{{ users.location }}</span>
+        <span class="label label-danger">{{ users.location }}</span>
+      </div>
+      <br />
+      <ul class="list-group">
+        <li class="list-group-item">
+          <strong>username: </strong>{{ users.name }}
+        </li>
+        <li class="list-group-item">
+          <strong>Repositories: </strong>{{ users.public_repos }}
+        </li>
+        <li class="list-group-item">
+          <strong>folowing: </strong>{{ users.following }}
+        </li>
+        <li class="list-group-item">
+          <strong>Member Since: </strong>{{ users.memberSince }}
+        </li>
+      </ul>
     </div>
-    <br />
-    <ul class="list-group">
-      <li class="list-group-item">
-        <strong>username: </strong>{{ users.username }}
-      </li>
-      <li class="list-group-item">
-        <strong>Repositories: </strong>{{ users.public_repos }}
-      </li>
-      <li class="list-group-item">
-        <strong>folowing: </strong>{{ users.following }}
-      </li>
-      <li class="list-group-item">
-        <strong>Member Since: </strong>{{ users.memberSince }}
-      </li>
-    </ul>
   </div>
 </div>
