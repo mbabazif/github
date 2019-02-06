@@ -36,7 +36,9 @@ export class UserService {
     const promise = new Promise((resolve, reject) => {
       this.http
         .get<ApiResponse>(
-          "https://api.github.com/users/" + username + environment.api_key
+          "https://api.github.com/users/" +
+            username +
+            "?access_token=404ec8832cf3ca186612004252f9279840b20783"
         )
         .toPromise()
         .then(profile => {
@@ -67,8 +69,7 @@ export class UserService {
       .get<ApiResponse>(
         "https://api.github.com/users/" +
           username +
-          "?access_token=" +
-          environment.api_key
+          "?access_token=404ec8832cf3ca186612004252f9279840b20783"
       )
       .subscribe(response => {
         this.items = response;
