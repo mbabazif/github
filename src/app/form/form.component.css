@@ -1,3 +1,7 @@
-img{
-    position:center;
+.image {
+  position: center;
+}
+.git {
+  background-color: lightskyblue;
+  align-content: center;
 }

@@ -17,7 +17,7 @@ export class UserService {
   items;
   constructor(private http: HttpClient) {
     this.username = "Florence";
-    this.users = new Users(" ", " ", " ", 0, 0, new Date());
+    this.users = new Users(" ", " ", " ", 0, 0, 0, new Date());
     this.repos = new Repos(" ");
   }
   getProfileInfo(username) {
@@ -31,7 +31,7 @@ export class UserService {
       html_url: string;
       followers: number;
       following: number;
-      memberSince: Date;
+      created_at: Date;
     }
     const promise = new Promise((resolve, reject) => {
       this.http
@@ -44,7 +44,8 @@ export class UserService {
           this.users.followers = profile.followers;
           this.users.following = profile.following;
 
-          this.users.memberSince = profile.memberSince;
+          this.users.public_repos = profile.public_repos;
+          this.users.memberSince = profile.created_at;
 
           console.log(profile);
           resolve();

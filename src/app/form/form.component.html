@@ -1,10 +1,13 @@
-<img
-  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkpwfnaGbdxJeO62FJXNOeJso_SA4PDmHb1I5kAFodSq3Na06v"
-/>
+<div class="image">
+  <img
+    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkpwfnaGbdxJeO62FJXNOeJso_SA4PDmHb1I5kAFodSq3Na06v"
+  />
+</div>
+
 <div class="container-boby">
   <div class="row">
     <div class="col-md-12">
-      <form class="well" (ngSubmit)="submituser()">
+      <form class="well" (ngSubmit)="submitSearch()">
         <div class="form-group">
           <input
             type="text"
@@ -32,14 +35,16 @@
     <br />
     <ul class="list-group">
       <li class="list-group-item">
-        <strong>Username: </strong>{{ users.name }}
+        <strong>followers: </strong>{{ users.followers }}
       </li>
       <li class="list-group-item">
-        <strong>Location: </strong>{{ users.location }}
+        <strong>Repositories: </strong>{{ users.public_repos }}
       </li>
-      <li class="list-group-item"><strong>Email: </strong>{{ users.email }}</li>
       <li class="list-group-item">
-        <strong>Member Since: </strong>{{ users.membersince }}
+        <strong>folowing: </strong>{{ users.following }}
+      </li>
+      <li class="list-group-item">
+        <strong>Member Since: </strong>{{ users.memberSince }}
       </li>
     </ul>
   </div>
