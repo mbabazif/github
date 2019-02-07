@@ -16,7 +16,7 @@ export class UserService {
   private username: string;
   items;
   constructor(private http: HttpClient) {
-    this.username = "Florence";
+    this.username = "";
     this.users = new Users(" ", " ", " ", 0, 0, 0, new Date());
     this.repos = new Repos(" ");
   }
@@ -38,7 +38,7 @@ export class UserService {
         .get<ApiResponse>(
           "https://api.github.com/users/" +
             username +
-            "?access_token=404ec8832cf3ca186612004252f9279840b20783"
+            "?access_token=240faed09989b18fa5f41ad96216959876cd3d2f"
         )
         .toPromise()
         .then(profile => {
@@ -69,7 +69,7 @@ export class UserService {
       .get<ApiResponse>(
         "https://api.github.com/users/" +
           username +
-          "?access_token=404ec8832cf3ca186612004252f9279840b20783"
+          "?access_token=240faed09989b18fa5f41ad96216959876cd3d2f"
       )
       .subscribe(response => {
         this.items = response;
